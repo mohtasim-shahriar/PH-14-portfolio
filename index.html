@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mohammad Shahriar | Full Stack Developer Portfolio</title>
   <meta name="description" content="Personal portfolio of Mohammad Shahriar, a Full Stack Developer specializing in C#, ASP.NET Core, and modern web frontend development.">
+  
+   <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+  
   <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,25 +20,37 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo" aria-label="Home">
-        <div class="hexagon">
-          <span>MS</span>
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+  <label for="nav-toggle" class="nav-overlay"></label>
+  <div class="nav-container">
+    <a href="#home" class="nav-logo" aria-label="Home">
+      <div class="hexagon"><span>MS</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#techstack">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="drawer-theme-item">
+        <div class="drawer-footer">
+          <span><i class="fa-regular fa-moon" id="drawer-theme-icon"></i> Dark mode</span>
+          <button class="toggle-pill" id="drawer-theme-toggle" aria-label="Toggle dark mode"></button>
         </div>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#techstack">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
-        <i class="fa-regular fa-moon"></i>
-      </button>
-    </div>
-  </nav>
+      </li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+      <i class="fa-regular fa-moon"></i>
+    </button>
+    <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+</nav>
 
   <!-- LEFT SIDEBAR -->
   <aside class="sidebar">
@@ -71,7 +86,7 @@
       <div class="hero-visual">
         <div class="avatar-wrapper">
           <div class="avatar-circle">
-            <img src="avatar.png" alt="Mohammad Shahriar Avatar" class="avatar-img">
+            <img src="shahriar.png" alt="Mohammad Shahriar Avatar" class="avatar-img">
           </div>
           <!-- Floating Badge - HTML5 -->
           <div class="floating-badge badge-html5" title="HTML5">
@@ -124,7 +139,7 @@
           </p>
           <div class="profile-actions">
             <a href="#" class="btn-primary" download>Resume</a>
-            <a href="https://linkedin.com/in/mohammadshahriar" target="_blank" rel="noopener noreferrer" class="btn-link">Connect on LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="https://www.linkedin.com/in/mohtasim47/" target="_blank" rel="noopener noreferrer" class="btn-link">Connect on LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           </div>
         </div>
       </div>
@@ -331,8 +346,8 @@
       <h2 class="section-title">Contact</h2>
       <div class="contact-card">
         <p class="contact-text">Have a project in mind or just want to say hi? My inbox is always open.</p>
-        <a href="mailto:shahriar.dev@gmail.com" class="contact-email">shahriar.dev@gmail.com</a>
-        <a href="mailto:shahriar.dev@gmail.com" class="btn-primary">Send Email <i class="fa-regular fa-envelope"></i></a>
+        <a href="mailto:shahriar4746@gmail.com" class="contact-email">Shahriar4746@gmail.com</a>
+        <a href="https://mail.google.com/mail/?view=cm&amp;to=shahriar4746@gmail.com" target="_blank" class="btn-primary">Send Email <i class="fa-regular fa-envelope"></i></a>
         
         <div class="contact-socials">
           <a href="https://linkedin.com/in/mohammadshahriar" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="LinkedIn">
@@ -358,76 +373,83 @@
   </footer>
 
   <!-- SCRIPT FOR TABS, DARK MODE, NAVIGATION ACTIVE STATES -->
-  <script>
-    // Tab switching utility
-    function initTabs(buttonsClass, contentClass) {
-      const buttons = document.querySelectorAll(buttonsClass);
-      const contents = document.querySelectorAll(contentClass);
-
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const target = btn.getAttribute('data-target');
-
-          // Remove active classes
-          buttons.forEach(b => b.classList.remove('active'));
-          contents.forEach(c => c.classList.remove('active'));
-
-          // Add active classes
-          btn.classList.add('active');
-          const targetContent = document.getElementById(target);
-          if (targetContent) {
-            targetContent.classList.add('active');
-          }
-        });
+<script>
+  function initTabs(buttonsClass, contentClass) {
+    const buttons = document.querySelectorAll(buttonsClass);
+    const contents = document.querySelectorAll(contentClass);
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-target');
+        buttons.forEach(b => b.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        const targetContent = document.getElementById(target);
+        if (targetContent) targetContent.classList.add('active');
       });
-    }
+    });
+  }
 
-    // Init Tech Stack Tabs
-    initTabs('.tab-btn', '.tab-content');
-    // Init Experience/Education Tabs
-    initTabs('.timeline-tab-btn', '.timeline-content');
+  initTabs('.tab-btn', '.tab-content');
+  initTabs('.timeline-tab-btn', '.timeline-content');
 
-    // Theme Toggle (Dark / Light Mode)
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = themeToggle.querySelector('i');
-    
-    // Check local storage or preference
-    if (localStorage.getItem('theme') === 'dark') {
+  // Theme toggle (navbar button)
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = themeToggle.querySelector('i');
+  const drawerToggle = document.getElementById('drawer-theme-toggle');
+  const drawerIcon = document.getElementById('drawer-theme-icon');
+
+  function applyTheme(isDark) {
+    if (isDark) {
       document.body.classList.add('dark-mode');
       themeIcon.className = 'fa-regular fa-sun';
+      drawerIcon.className = 'fa-regular fa-sun';
+      drawerToggle.classList.add('on');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-mode');
+      themeIcon.className = 'fa-regular fa-moon';
+      drawerIcon.className = 'fa-regular fa-moon';
+      drawerToggle.classList.remove('on');
+      localStorage.setItem('theme', 'light');
     }
+  }
 
-    themeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      if (document.body.classList.contains('dark-mode')) {
-        themeIcon.className = 'fa-regular fa-sun';
-        localStorage.setItem('theme', 'dark');
-      } else {
-        themeIcon.className = 'fa-regular fa-moon';
-        localStorage.setItem('theme', 'light');
-      }
+  // Load saved theme
+  if (localStorage.getItem('theme') === 'dark') applyTheme(true);
+
+  // Navbar button
+  themeToggle.addEventListener('click', () => {
+    applyTheme(!document.body.classList.contains('dark-mode'));
+  });
+
+  // Drawer pill button
+  drawerToggle.addEventListener('click', () => {
+    applyTheme(!document.body.classList.contains('dark-mode'));
+  });
+
+  // Active nav on scroll
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const sections = document.querySelectorAll('section');
+
+  window.addEventListener('scroll', () => {
+    let currentSectionId = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      if (pageYOffset >= sectionTop) currentSectionId = section.getAttribute('id');
     });
-
-    // Active Navigation Links on Scroll
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const sections = document.querySelectorAll('section');
-
-    window.addEventListener('scroll', () => {
-      let currentSectionId = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        if (pageYOffset >= sectionTop) {
-          currentSectionId = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSectionId}`) {
-          link.classList.add('active');
-        }
-      });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${currentSectionId}`) link.classList.add('active');
     });
-  </script>
+  });
+
+  // Close drawer when a nav link is clicked
+  const navToggle = document.getElementById('nav-toggle');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.checked = false;
+    });
+  });
+</script>
 </body>
 </html>
