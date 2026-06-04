@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammad Shahriar | Full Stack Developer Portfolio</title>
+  <meta name="description" content="Personal portfolio of Mohammad Shahriar, a Full Stack Developer specializing in C#, ASP.NET Core, and modern web frontend development.">
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome for premium icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Home">
+        <div class="hexagon">
+          <span>MS</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#techstack">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="fa-regular fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-socials">
+      <a href="https://linkedin.com/in/mohammadshahriar" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/mohammadshahriar" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Twitter">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+    </div>
+  </aside>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="home">
+    <div class="hero-bg-wash"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-badge">👋 Hey</span>
+        <h1 class="hero-title">I'm Mohammad Shahriar</h1>
+        <h2 class="hero-subtitle">I am into <span class="typing-text"></span><span class="typing-cursor">|</span></h2>
+        <p class="hero-description">
+          I focus on building scalable, user-friendly web applications with clean code and modern technologies. I enjoy turning ideas into real products that solve real problems.
+        </p>
+        <a href="#about" class="btn-primary">About Me <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="hero-visual">
+        <div class="avatar-wrapper">
+          <div class="avatar-circle">
+            <img src="avatar.png" alt="Mohammad Shahriar Avatar" class="avatar-img">
+          </div>
+          <!-- Floating Badge - HTML5 -->
+          <div class="floating-badge badge-html5" title="HTML5">
+            <i class="fa-brands fa-html5" style="color: #E34F26;"></i>
+          </div>
+          <!-- Floating Badge - CSS3 -->
+          <div class="floating-badge badge-css3" title="CSS3">
+            <i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i>
+          </div>
+          <!-- Floating Badge - C# -->
+          <div class="floating-badge badge-csharp" title="C#">
+            <span class="badge-icon-text" style="color: #7C3AED; font-weight: bold; font-family: sans-serif;">C#</span>
+          </div>
+          <!-- Floating Badge - GitHub -->
+          <div class="floating-badge badge-github" title="GitHub">
+            <i class="fa-brands fa-github" style="color: #181717;"></i>
+          </div>
+          <!-- Floating Badge - SQL -->
+          <div class="floating-badge badge-sql" title="SQL">
+            <i class="fa-solid fa-database" style="color: #00758F;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dot-grid"></div>
+  </section>
+
+  <!-- ABOUT ME SECTION -->
+  <section class="about-section" id="about">
+    <div class="section-container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <!-- Left Column -->
+        <div class="about-left">
+          <div class="about-card">
+            <div class="profile-placeholder">
+              <i class="fa-solid fa-user-astronaut"></i>
+            </div>
+            <div class="profile-caption">
+              &lt; I build stuff 🚀 /&gt;
+            </div>
+          </div>
+        </div>
+        <!-- Right Column -->
+        <div class="about-right">
+          <h3 class="profile-name">Mohammad Shahriar</h3>
+          <span class="profile-badge">Full Stack Developer</span>
+          <p class="profile-bio">
+            Hey there! 🎉 I'm a passionate Full Stack Developer currently pursuing my BSc in Computer Science & Engineering at American International University-Bangladesh (AIUB). I've been into web development since my early semesters and love building projects that blend great UI with solid backend logic. From C# desktop apps to ASP.NET Core web apps and HTML/CSS frontends — I enjoy the full journey of building software. Always learning, always shipping. 🚀
+          </p>
+          <div class="profile-actions">
+            <a href="#" class="btn-primary" download>Resume</a>
+            <a href="https://linkedin.com/in/mohammadshahriar" target="_blank" rel="noopener noreferrer" class="btn-link">Connect on LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK SECTION -->
+  <section class="tech-section" id="techstack">
+    <div class="section-container">
+      <h2 class="section-title">Tech Stack</h2>
+      
+      <!-- Pill Tabs -->
+      <div class="tabs-container">
+        <button class="tab-btn active" data-target="frontend">Frontend</button>
+        <button class="tab-btn" data-target="backend">Backend</button>
+        <button class="tab-btn" data-target="others">Others</button>
+      </div>
+
+      <!-- Tab Content Grids -->
+      <div class="tab-content active" id="frontend">
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-brands fa-html5" style="color: #E34F26;"></i></div>
+            <span class="tech-name">HTML5</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i></div>
+            <span class="tech-name">CSS3</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-brands fa-js" style="color: #F7DF1E;"></i></div>
+            <span class="tech-name">JavaScript</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-brands fa-bootstrap" style="color: #7952B3;"></i></div>
+            <span class="tech-name">Bootstrap</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-brands fa-sass" style="color: #CC6699;"></i></div>
+            <span class="tech-name">Sass</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="backend">
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-icon"><span class="tech-icon-text">C#</span></div>
+            <span class="tech-name">C#</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-solid fa-server" style="color: #512BD4;"></i></div>
+            <span class="tech-name">ASP.NET Core</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-solid fa-database" style="color: #00758F;"></i></div>
+            <span class="tech-name">SQL Server</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-brands fa-python" style="color: #3776AB;"></i></div>
+            <span class="tech-name">Python</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-solid fa-network-wired" style="color: #009688;"></i></div>
+            <span class="tech-name">REST API</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="others">
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-brands fa-git-alt" style="color: #F05032;"></i></div>
+            <span class="tech-name">Git</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-brands fa-github" style="color: #181717;"></i></div>
+            <span class="tech-name">GitHub</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><span class="tech-icon-text">VS</span></div>
+            <span class="tech-name">Visual Studio</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-solid fa-code" style="color: #007ACC;"></i></div>
+            <span class="tech-name">VS Code</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-brands fa-figma" style="color: #F24E1E;"></i></div>
+            <span class="tech-name">Figma</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE & EDUCATION SECTION -->
+  <section class="experience-section" id="experience">
+    <div class="section-container">
+      <h2 class="section-title">Experience & Education</h2>
+
+      <!-- Pill Tabs -->
+      <div class="tabs-container">
+        <button class="timeline-tab-btn active" data-target="experience-timeline">Experience</button>
+        <button class="timeline-tab-btn" data-target="education-timeline">Education</button>
+      </div>
+
+      <!-- Experience Timeline -->
+      <div class="timeline-content active" id="experience-timeline">
+        <div class="timeline">
+          <div class="timeline-line"></div>
+          
+          <!-- Card 1 -->
+          <div class="timeline-item left">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3>AIUB Tech Club</h3>
+                <span class="timeline-date">Jan 2024 – Present</span>
+              </div>
+              <span class="timeline-role">Web Developer Volunteer</span>
+              <ul class="timeline-bullets">
+                <li>Built and maintained the club's internal web tools using HTML/CSS/JS.</li>
+                <li>Collaborated with team members on hackathon project UIs.</li>
+                <li>Contributed to open source mini-projects on GitHub.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="timeline-item right">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3>Personal Freelance Projects</h3>
+                <span class="timeline-date">Jun 2023 – Dec 2023</span>
+              </div>
+              <span class="timeline-role">Frontend Developer</span>
+              <ul class="timeline-bullets">
+                <li>Designed and developed responsive landing pages for local clients.</li>
+                <li>Built a shop management system using C# Windows Forms and SQL Server.</li>
+                <li>Created a hotel management desktop app as an academic project.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Education Timeline -->
+      <div class="timeline-content" id="education-timeline">
+        <div class="timeline">
+          <div class="timeline-line"></div>
+          
+          <!-- Card 1 -->
+          <div class="timeline-item left">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3>American International University-Bangladesh (AIUB)</h3>
+                <span class="timeline-date">2022 – Present</span>
+              </div>
+              <span class="timeline-role">BSc in Computer Science & Engineering</span>
+              <p class="timeline-text">Currently in 5th semester.</p>
+              <ul class="timeline-bullets">
+                <li><strong>Key Courses:</strong> Algorithms, Data Structures, OOP (C#), Database Systems, Electrical Circuits.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="timeline-item right">
+            <div class="timeline-marker">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3>Secondary & Higher Secondary</h3>
+                <span class="timeline-date">Completed 2021</span>
+              </div>
+              <span class="timeline-role">Science Group</span>
+              <ul class="timeline-bullets">
+                <li>Strong foundation in Mathematics and Physics.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section" id="contact">
+    <div class="section-container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-card">
+        <p class="contact-text">Have a project in mind or just want to say hi? My inbox is always open.</p>
+        <a href="mailto:shahriar.dev@gmail.com" class="contact-email">shahriar.dev@gmail.com</a>
+        <a href="mailto:shahriar.dev@gmail.com" class="btn-primary">Send Email <i class="fa-regular fa-envelope"></i></a>
+        
+        <div class="contact-socials">
+          <a href="https://linkedin.com/in/mohammadshahriar" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/mohammadshahriar" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 Mohammad Shahriar. Built with HTML & CSS.</p>
+  </footer>
+
+  <!-- SCRIPT FOR TABS, DARK MODE, NAVIGATION ACTIVE STATES -->
+  <script>
+    // Tab switching utility
+    function initTabs(buttonsClass, contentClass) {
+      const buttons = document.querySelectorAll(buttonsClass);
+      const contents = document.querySelectorAll(contentClass);
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = btn.getAttribute('data-target');
+
+          // Remove active classes
+          buttons.forEach(b => b.classList.remove('active'));
+          contents.forEach(c => c.classList.remove('active'));
+
+          // Add active classes
+          btn.classList.add('active');
+          const targetContent = document.getElementById(target);
+          if (targetContent) {
+            targetContent.classList.add('active');
+          }
+        });
+      });
+    }
+
+    // Init Tech Stack Tabs
+    initTabs('.tab-btn', '.tab-content');
+    // Init Experience/Education Tabs
+    initTabs('.timeline-tab-btn', '.timeline-content');
+
+    // Theme Toggle (Dark / Light Mode)
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle.querySelector('i');
+    
+    // Check local storage or preference
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      themeIcon.className = 'fa-regular fa-sun';
+    }
+
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        themeIcon.className = 'fa-regular fa-sun';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        themeIcon.className = 'fa-regular fa-moon';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Active Navigation Links on Scroll
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('section');
+
+    window.addEventListener('scroll', () => {
+      let currentSectionId = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (pageYOffset >= sectionTop) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSectionId}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
